@@ -95,7 +95,7 @@ export default function Contact() {
                   <a
                     className="bg-gray-800 border-1 border-solid border-gray-700 flex items-start gap-4 p-4 rounded-xl hover:bg-gray-900 transition-colors transform-all hover:scale-95 hover:duration-500 hover:ease-in-out"
                     href="https://github.com/robsonraphael">
-                    <div className="w-15 h-12 bg-gradient-to-br from-gray-600 via-gray-400 to-gray-300 rounded-xl flex items-center justify-center flex-shrink-0 border-transparent">
+                    <div className="w-15 h-12 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 rounded-xl flex items-center justify-center flex-shrink-0 border-transparent">
                       <Github className='text-white' />
                     </div>
                     <div>
