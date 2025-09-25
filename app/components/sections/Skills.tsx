@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { skills } from '@/data/skills'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 export default function Skills() {
   const [isPaused, setIsPaused] = useState(false)
@@ -178,7 +178,7 @@ function SkillCard({ skill }: { skill: { name: string; icon: string; iconType: s
               width={40}
               height={40}
               className="object-contain"
-            />
+            /> 
           ) : (
             <span>{skill.icon}</span>
           )}

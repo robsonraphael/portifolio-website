@@ -2,8 +2,8 @@ import { StaticImageData } from 'next/image'
 
 export interface Skill {
   name: string
-  icon: string | StaticImageData
-  iconType: 'emoji' | 'svg' // Adicione este campo para identificar o tipo
+  icon: string
+  iconType: 'emoji' | 'svg'
 }
 
 export const skills: Skill[] = [
