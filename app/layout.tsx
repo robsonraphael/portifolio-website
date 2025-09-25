@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "Raphael - Desenvolvedor Full Stack",
   description: "Crio aplicações Web moderno robusto e escaláveis, do back até a interface.",
+  icons: "/favicon.ico"
 };
 
 export default function RootLayout({

@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f172a;        /* custom-dark */
+  --foreground: #f1f5f9;
 }
 
-/* Smooth scrolling */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+  }
+}
+
+/* Resto do seu CSS permanece igual */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -28,7 +34,6 @@ html {
   background: #6b7280;
 }
 
-/* Custom styles */
 @layer components {
   .container {
     @apply max-w-7xl mx-auto;
