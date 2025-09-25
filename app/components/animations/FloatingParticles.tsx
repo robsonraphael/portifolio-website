@@ -32,7 +32,7 @@ export default function FloatingParticles() {
       speedY: number
       opacity: number
 
-      constructor() {
+      constructor(canvas: HTMLCanvasElement) {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
         this.size = Math.random() * 2 + 0.5
@@ -46,8 +46,8 @@ export default function FloatingParticles() {
         this.y += this.speedY
 
         // Rebater nas bordas
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1
+        if (this.x < 0 || this.x > canvas!.width) this.speedX *= -1
+        if (this.y < 0 || this.y > canvas!.height) this.speedY *= -1
       }
 
       draw() {
@@ -61,7 +61,7 @@ export default function FloatingParticles() {
 
     // Criar partículas
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle())
+      particles.push(new Particle(canvas))
     }
 
     // Animação
