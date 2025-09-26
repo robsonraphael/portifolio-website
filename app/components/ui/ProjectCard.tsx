@@ -3,7 +3,7 @@ interface Project {
   title: string
   description: string
   technologies: string[]
-  type: 'web' | 'bots' | 'scraping'
+  type: 'web' | 'bots' | 'scraping' | 'api'
   image?: string
   liveUrl?: string
   githubUrl?: string
