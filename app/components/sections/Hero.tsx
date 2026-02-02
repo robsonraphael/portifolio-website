@@ -10,13 +10,11 @@ export default function Hero() {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-br from-blue-800 via-blue-500 to-blue-300 bg-clip-text text-transparent mb-6 leading-tight">
-          RaphaDEV
+          RabsCode
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Como um desenvolvedor full stack apaixonado, crio aplicações web modernas, 
-          robustas e escaláveis, do backend à interface. Especialista em automações, 
-          raspagem de dados e criação de bots para Telegram e Discord.
+          Precisa de dados que estão espalhados pela web? Quer automatizar processos repetitivos? Desenvolvo bots inteligentes e sistemas de scraping sob medida que trabalham para você enquanto você foca no que realmente importa.
         </p>
         
         <div className="space-x-4 space-y-5">

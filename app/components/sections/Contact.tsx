@@ -75,7 +75,7 @@ export default function Contact() {
                   Contato
                 </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-10">
                   <a
                     className="bg-gray-800 border-1 border-solid border-gray-700 flex items-start gap-4 p-4 rounded-xl hover:bg-gray-900 transition-colors transform-all hover:scale-95 hover:duration-500 hover:ease-in-out"
                     href="mailto:robsonraphael123@outlook.com">
@@ -130,24 +130,6 @@ export default function Contact() {
                         className="text-gray-200 hover:text-gray-400 transition-colors font-light text-sm"
                       >
                         ra6hael.
-                      </span>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/in/robsonraphael/"
-                    target="_blank"
-                    className="bg-gray-800 border-1 border-solid border-gray-700 flex items-start gap-4 p-4 rounded-xl hover:bg-gray-900 transition-colors transform-all hover:scale-95 hover:duration-500 hover:ease-in-out"
-                  >
-                    <div className="w-15 h-12 bg-linear-90 from-[#0E76A8] to-[#0077B5] rounded-xl flex items-center justify-center flex-shrink-0 border-transparent">
-                      <Linkedin className='text-white'/>
-                    </div>
-                    <div>
-                      <span className="text-gray-50 block mb-1">Linkedin</span>
-                      <span
-                        className="text-gray-200 hover:text-gray-400 transition-colors font-light text-sm"
-                      >
-                        robson raphael
                       </span>
                     </div>
                   </a>
