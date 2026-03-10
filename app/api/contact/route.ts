@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     // Conteúdo do email
     const mailOptions = {
-      from: `"Portfólio RabsCode" <${process.env.EMAIL_USER}>`,
+      from: `"Site Robson Raphael" <${process.env.EMAIL_USER}>`,
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
       subject: `📧 Mensagem - ${subject}`,
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
           <body>
             <div class="container">
               <div class="header">
-                <h1>📧 Nova Mensagem do Portfólio</h1>
+                <h1>📧 Nova Mensagem do Site</h1>
                 <p>Alguém entrou envio uma mensagem</p>
               </div>
               <div class="content">
@@ -86,14 +86,14 @@ export async function POST(req: Request) {
               </div>
               <div class="footer">
                 <p>Esta mensagem foi enviada através do formulário de contato</p>
-                <p>💻 RabsCode - Desenvolvedor</p>
+                <p>Robson Raphael | Tecnologia Jurídica</p>
               </div>
             </div>
           </body>
         </html>
       `,
       text: `
-        NOVA MENSAGEM DO PORTFÓLIO
+        NOVA MENSAGEM DO SITE
         ==========================
         
         Nome: ${name}
@@ -104,7 +104,7 @@ export async function POST(req: Request) {
         ${message}
         
         ---
-        Enviado através do formulário de contato do portfólio.
+        Enviado através do formulário de contato do site.
         Data: ${new Date().toLocaleString('pt-BR')}
       `
     }

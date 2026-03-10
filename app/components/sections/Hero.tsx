@@ -1,43 +1,40 @@
-import FloatingParticles from "@/app/components/animations/FloatingParticles"
+import FloatingParticles from '@/app/components/animations/FloatingParticles'
+
+const whatsappUrl =
+  'https://wa.me/?text=Olá%2C%20Robson!%20Quero%20modernizar%20meu%20escritório%20de%20advocacia.'
 
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-      <FloatingParticles/>
-
-      {/* Gradiente profundidade */}
+      <FloatingParticles />
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/60"></div>
-      
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-br from-blue-800 via-blue-500 to-blue-300 bg-clip-text text-transparent mb-6 leading-tight">
-          RabsCode
+
+      <div className="container mx-auto px-6 text-center relative z-10 pt-20">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Tecnologia que trabalha enquanto você advoga.
         </h1>
-        
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Precisa de dados que estão espalhados pela web? Quer automatizar processos repetitivos? Desenvolvo bots inteligentes e sistemas de scraping sob medida que trabalham para você enquanto você foca no que realmente importa.
+
+        <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          Desenvolvo sites profissionais, automação de WhatsApp e sistemas de gestão exclusivamente para escritórios de advocacia. Sem complicação,
+          sem precisar entender de tecnologia.
         </p>
-        
-        <div className="space-x-4 space-y-5">
+
+        <div className="space-x-4 space-y-4">
           <a
-            href="#projects"
-            className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-block border-2 border-transparent hover:border-white/20 shadow-2xl"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-500 transition-all duration-300 inline-block"
           >
-            Veja meus projetos →
+            Quero modernizar meu escritório
           </a>
 
           <a
-            href="#contact"
-            className="border-2 border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-block backdrop-blur-sm"
+            href="#services"
+            className="border-2 border-gray-600 text-gray-300 hover:border-[#C8A83C] hover:text-[#C8A83C] px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-block"
           >
-            Entrar em Contato
+            Ver serviços
           </a>
-        </div>
-      </div>
-      
-      {/* Scroll Indicator refinado */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hover:border-white transition-colors">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 hover:bg-white transition-colors"></div>
         </div>
       </div>
     </section>

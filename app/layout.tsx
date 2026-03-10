@@ -1,30 +1,26 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from '@/app/components/ui/Header';
-import Footer from '@/app/components/ui/Footer';
-
-const inter = Inter({ subsets: ['latin'] })
-
+import type { Metadata } from 'next'
+import './globals.css'
+import Header from '@/app/components/ui/Header'
+import Footer from '@/app/components/ui/Footer'
 
 export const metadata: Metadata = {
-  title: "Raphael - Desenvolvedor Full Stack",
-  description: "Crio aplicações Web moderno robusto e escaláveis, do back até a interface.",
-  icons: "/favicon.ico"
-};
+  title: 'Robson Raphael | Tecnologia Jurídica',
+  description: 'Soluções em tecnologia para escritórios de advocacia: sites profissionais, automação de WhatsApp e sistemas de gestão.',
+  icons: '/favicon.ico',
+}
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className="antialiased">
         <Header />
         {children}
         <Footer />
       </body>
     </html>
-  );
+  )
 }
