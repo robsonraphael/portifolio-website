@@ -1,8 +1,16 @@
 'use client'
 
 import { useState } from 'react'
+<<<<<<< Updated upstream
 import { Github, Mail, Linkedin } from 'lucide-react'
 import FloatingParticles from "@/app/components/animations/FloatingParticles"
+=======
+import { Mail, Linkedin } from 'lucide-react'
+import FloatingParticles from '@/app/components/animations/FloatingParticles'
+
+const whatsappUrl =
+  'https://wa.me/5581981717072?text=Olá%2C%20Robson!%20Quero%20modernizar%20meu%20escritório%20de%20advocacia.'
+>>>>>>> Stashed changes
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -54,18 +62,27 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-20 bg-[#0f172a]">
+    <section id="contact" className="relative py-20 bg-bg-overlay">
       <FloatingParticles />
       <div className="container mx-auto px-6">
+<<<<<<< Updated upstream
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-br from-blue-500 via-blue-400 to-blue-300 bg-clip-text text-transparent mb-4">Vamos Trabalhar Juntos</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Tem um projeto em mente? Vamos conversar! Estou sempre aberto a novas oportunidades e desafios.
+=======
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-display text-text-primary mb-4">Pronto para modernizar seu escritório?</h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+              Me conta o que você precisa e te mostro como a tecnologia pode resolver. Respondo em até 24 horas.
+>>>>>>> Stashed changes
             </p>
             <div className="w-40 h-1 bg-gray-800 mx-auto mt-6 rounded-md"></div>
           </div>
 
+<<<<<<< Updated upstream
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* Informações de Contato */}
@@ -250,6 +267,48 @@ export default function Contact() {
                   Geralmente respondo em até 24 horas
                 </p>
               </div>
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="space-y-4">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary w-full"
+              >
+                Falar no WhatsApp
+              </a>
+
+              <a href="mailto:rerautomacoes@gmail.com" className="card flex gap-4 items-center text-text-primary">
+                <Mail className="text-gold" />
+                <span>rerautomacoes@gmail.com</span>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/robsonraphael"
+                target="_blank"
+                rel="noreferrer"
+                className="card flex gap-4 items-center text-text-primary"
+              >
+                <Linkedin className="text-gold" />
+                <span>linkedin.com/in/robsonraphael</span>
+              </a>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <input name="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Nome" className="input-field" disabled={isSubmitting} />
+              <input name="email" type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="E-mail" className="input-field" disabled={isSubmitting} />
+              <input name="subject" required value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} placeholder="Assunto" className="input-field" disabled={isSubmitting} />
+              <textarea name="message" required rows={6} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="Mensagem" className="input-field resize-none" disabled={isSubmitting} />
+
+              {submitStatus === 'success' && <p className="text-status-success">Mensagem enviada com sucesso.</p>}
+              {submitStatus === 'error' && <p className="text-status-error">Erro ao enviar. Tente novamente.</p>}
+
+              <button type="submit" disabled={isSubmitting} className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed">
+                {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+              </button>
+              <p className="text-text-muted text-sm">Geralmente respondo em até 24 horas.</p>
+>>>>>>> Stashed changes
             </form>
           </div>
 

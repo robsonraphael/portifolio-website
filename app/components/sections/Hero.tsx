@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import FloatingParticles from "@/app/components/animations/FloatingParticles"
 
 export default function Hero() {
@@ -21,13 +22,47 @@ export default function Hero() {
           <a
             href="#projects"
             className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-block border-2 border-transparent hover:border-white/20 shadow-2xl"
+=======
+import FloatingParticles from '@/app/components/animations/FloatingParticles'
+
+const whatsappUrl =
+  'https://wa.me/5581981717072?text=Olá%2C%20Robson!%20Quero%20modernizar%20meu%20escritório%20de%20advocacia.'
+
+export default function Hero() {
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center hero-surface relative overflow-hidden">
+      <FloatingParticles />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/10 to-black/40"></div>
+
+      <div className="container mx-auto px-6 text-center relative z-10 pt-20">
+        <h1 className="text-4xl md:text-6xl font-display text-text-primary mb-6 leading-tight">
+          Tecnologia que trabalha enquanto você advoga.
+        </h1>
+
+        <p className="text-lg md:text-2xl text-text-secondary mb-8 max-w-4xl mx-auto leading-relaxed">
+          Desenvolvo sites profissionais, automação de WhatsApp e sistemas de gestão exclusivamente para escritórios de advocacia. Sem complicação,
+          sem precisar entender de tecnologia.
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary"
+>>>>>>> Stashed changes
           >
             Veja meus projetos →
           </a>
 
           <a
+<<<<<<< Updated upstream
             href="#contact"
             className="border-2 border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-block backdrop-blur-sm"
+=======
+            href="#services"
+            className="btn-secondary"
+>>>>>>> Stashed changes
           >
             Entrar em Contato
           </a>

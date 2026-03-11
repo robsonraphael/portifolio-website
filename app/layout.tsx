@@ -20,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+<<<<<<< Updated upstream
       <body className={inter.className}>
+=======
+      <body className="antialiased font-sans bg-bg-base text-text-secondary">
+>>>>>>> Stashed changes
         <Header />
         {children}
         <Footer />

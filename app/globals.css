@@ -1,20 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #0f172a;        /* custom-dark */
-  --foreground: #f1f5f9;
+  color-scheme: dark;
+
+  --bg-base: 10 15 30;
+  --bg-surface: 17 24 39;
+  --bg-elevated: 26 37 64;
+  --bg-overlay: 13 21 38;
+
+  --gold: 201 168 76;
+  --gold-light: 232 201 122;
+  --gold-dim: 154 122 56;
+  --gold-subtle: rgba(201, 168, 76, 0.1);
+
+  --text-primary: 245 240 232;
+  --text-secondary: 212 203 184;
+  --text-muted: 122 132 153;
+  --text-disabled: 61 74 99;
+
+  --border-default: rgba(201, 168, 76, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(201, 168, 76, 0.35);
+
+  --status-success: 74 222 128;
+  --status-warning: 245 158 11;
+  --status-error: 248 113 113;
+  --status-info: 96 165 250;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 4px 20px rgba(201, 168, 76, 0.2);
+
+  --transition-fast: all 0.15s ease;
+  --transition-base: all 0.2s ease;
+  --transition-slow: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f1f5f9;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-}
 
-/* Resto do seu CSS permanece igual */
-html {
-  scroll-behavior: smooth;
+  body {
+    background-color: rgb(var(--bg-base));
+    color: rgb(var(--text-secondary));
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1,
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: rgb(var(--text-primary));
+  }
+
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    color: rgb(var(--text-primary));
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -22,25 +75,151 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: rgb(var(--bg-overlay));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4b5563;
+  background: rgba(var(--gold), 0.35);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+  background: rgba(var(--gold), 0.5);
 }
 
 @layer components {
   .container {
     @apply max-w-7xl mx-auto;
   }
+
+  .surface-blur {
+    background: rgba(var(--bg-overlay), 0.9);
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .hero-surface {
+    background:
+      radial-gradient(1200px circle at 50% 0%, rgba(var(--gold), 0.14), transparent 55%),
+      linear-gradient(180deg, rgba(var(--bg-overlay), 0.75) 0%, rgba(var(--bg-base), 1) 100%);
+  }
+
+  .card {
+    background: rgb(var(--bg-surface));
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    position: relative;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+
+  .card-featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgb(var(--gold)), transparent);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .btn-primary {
+    background: rgb(var(--gold));
+    color: rgb(var(--bg-base));
+    border: none;
+    padding: 12px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--radius-md);
+    transition: var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover {
+    background: rgb(var(--gold-light));
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgb(var(--text-secondary));
+    border: 1px solid var(--border-default);
+    padding: 10px 20px;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--radius-md);
+    transition: var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgb(var(--gold));
+    color: rgb(var(--gold));
+  }
+
+  .input-field {
+    background: rgb(var(--bg-elevated));
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: rgb(var(--text-primary));
+    width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: rgb(var(--gold));
+    box-shadow: 0 0 0 3px var(--gold-subtle);
+  }
+
+  .input-field::placeholder {
+    color: rgb(var(--text-muted));
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge-gold {
+    background: rgba(var(--gold), 0.12);
+    color: rgb(var(--gold));
+    border: 1px solid rgba(var(--gold), 0.25);
+  }
+
+  .badge-muted {
+    background: rgba(var(--text-muted), 0.12);
+    color: rgb(var(--text-muted));
+    border: 1px solid rgba(var(--text-muted), 0.25);
+  }
 }
 
-/* Animation classes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -56,15 +235,24 @@ html {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Animações personalizadas */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .animate-float {
@@ -75,7 +263,6 @@ html {
   animation: pulse 4s ease-in-out infinite;
 }
 
-/* Efeito de brilho */
 .glow {
-  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
+  filter: drop-shadow(0 0 22px rgba(201, 168, 76, 0.3));
 }

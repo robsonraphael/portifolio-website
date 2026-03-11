@@ -12,6 +12,10 @@ export default function FloatingParticles() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
+    const rootStyles = getComputedStyle(document.documentElement)
+    const goldRaw = rootStyles.getPropertyValue('--gold').trim()
+    const goldRgb = goldRaw ? goldRaw.replace(/\s+/g, ', ') : '201, 168, 76'
+
     // Configuração do canvas
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
@@ -52,7 +56,7 @@ export default function FloatingParticles() {
 
       draw() {
         if (!ctx) return
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`
+        ctx.fillStyle = `rgba(${goldRgb}, ${this.opacity})`
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()

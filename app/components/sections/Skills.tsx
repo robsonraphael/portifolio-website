@@ -72,6 +72,7 @@ export default function Skills() {
   }, [isPaused])
 
   return (
+<<<<<<< Updated upstream
     <section id="skills" className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -101,6 +102,23 @@ export default function Skills() {
                   <SkillCard key={`carousel1-${skill.name}-${index}`} skill={skill} />
                 ))}
               </div>
+=======
+    <section id="skills" className="py-20 bg-bg-base">
+      <div className="container mx-auto px-6 max-w-5xl">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-display text-text-primary">Tecnologias utilizadas</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {skills.map((skill) => (
+            <div key={skill.name} className="card flex items-center gap-3 p-5">
+              {skill.iconType === 'svg' ? (
+                <Image src={skill.icon} alt={skill.name} width={24} height={24} className="object-contain" />
+              ) : (
+                <span className="text-2xl">{skill.icon}</span>
+              )}
+              <span className="text-text-primary font-medium">{skill.name}</span>
+>>>>>>> Stashed changes
             </div>
           </div>
 

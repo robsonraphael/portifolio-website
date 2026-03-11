@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
+
+// Inicializa o Resend com sua chave de API (idealmente via .env)
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -16,12 +19,10 @@ export async function POST(req: Request) {
     // Validação de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Email inválido' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Email inválido' }, { status: 400 })
     }
 
+<<<<<<< Updated upstream
     console.log('Tentando conectar com Gmail...')
     console.log('Email user:', process.env.EMAIL_USER ? 'Configurado' : 'Faltando')
 
@@ -43,6 +44,15 @@ export async function POST(req: Request) {
       from: `"Portfólio RabsCode" <${process.env.EMAIL_USER}>`,
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
+=======
+    // Enviar email via Resend
+    const { data, error } = await resend.emails.send({
+      // Como você está no plano gratuito, use o domínio 'onboarding@resend.dev'
+      // Quando você validar seu domínio próprio, troque para: "Nome <contato@seudominio.com>"
+      from: 'Site Robson Raphael <onboarding@resend.dev>',
+      to: process.env.CONTACT_EMAIL || 'robsonraphael2001@gmail.com',
+      replyTo: email, // Isso permite que você responda direto para quem preencheu o form
+>>>>>>> Stashed changes
       subject: `📧 Mensagem - ${subject}`,
       html: `
         <!DOCTYPE html>
@@ -51,7 +61,7 @@ export async function POST(req: Request) {
             <meta charset="utf-8">
             <style>
               body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; }
-              .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 10px; overflow: hidden; }
+              .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; }
               .header { background: #0f172a; color: white; padding: 30px; text-align: center; }
               .content { padding: 30px; }
               .field { margin-bottom: 20px; padding: 15px; background: #f8fafc; border-radius: 5px; }
@@ -63,8 +73,12 @@ export async function POST(req: Request) {
           <body>
             <div class="container">
               <div class="header">
+<<<<<<< Updated upstream
                 <h1>📧 Nova Mensagem do Portfólio</h1>
                 <p>Alguém entrou envio uma mensagem</p>
+=======
+                <h1>📧 Nova Mensagem</h1>
+>>>>>>> Stashed changes
               </div>
               <div class="content">
                 <div class="field">
@@ -72,7 +86,7 @@ export async function POST(req: Request) {
                   <div>${name}</div>
                 </div>
                 <div class="field">
-                  <span class="label">📩 Email:</span>
+                  <span class="label">📩 Email do Remetente:</span>
                   <div>${email}</div>
                 </div>
                 <div class="field">
@@ -85,13 +99,18 @@ export async function POST(req: Request) {
                 </div>
               </div>
               <div class="footer">
+<<<<<<< Updated upstream
                 <p>Esta mensagem foi enviada através do formulário de contato</p>
                 <p>💻 RabsCode - Desenvolvedor</p>
+=======
+                <p>Enviado do seu site para você</p>
+>>>>>>> Stashed changes
               </div>
             </div>
           </body>
         </html>
       `,
+<<<<<<< Updated upstream
       text: `
         NOVA MENSAGEM DO PORTFÓLIO
         ==========================
@@ -107,36 +126,24 @@ export async function POST(req: Request) {
         Enviado através do formulário de contato do portfólio.
         Data: ${new Date().toLocaleString('pt-BR')}
       `
+=======
+    });
+
+    if (error) {
+      console.error('❌ Erro da Resend:', error);
+      return NextResponse.json({ error: error.message }, { status: 400 });
+>>>>>>> Stashed changes
     }
 
-    // Enviar email
-    const info = await transporter.sendMail(mailOptions)
-    console.log('Email enviado com sucesso! Message ID:', info.messageId)
-
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Email enviado com sucesso!',
-        messageId: info.messageId
-      },
+      { success: true, message: 'Email enviado!', id: data?.id },
       { status: 200 }
     )
 
   } catch (error: any) {
-    console.error('❌ Erro ao enviar email:', error)
-    
-    let errorMessage = 'Erro interno do servidor'
-    
-    if (error.code === 'EAUTH') {
-      errorMessage = 'Erro de autenticação. Verifique suas credenciais do Gmail.'
-    } else if (error.code === 'ECONNECTION') {
-      errorMessage = 'Erro de conexão com o servidor do Gmail.'
-    } else if (error.response) {
-      errorMessage = `Erro do Gmail: ${error.response}`
-    }
-    
+    console.error('❌ Erro interno:', error)
     return NextResponse.json(
-      { error: errorMessage },
+      { error: 'Erro ao processar sua requisição' },
       { status: 500 }
     )
   }
