@@ -7,7 +7,6 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-<<<<<<< Updated upstream
   { name: "JavaScript", icon: '/icons/javascript.svg', iconType: 'svg' },
   { name: "TypeScript", icon: '/icons/typescript.svg', iconType: 'svg' },
   { name: "React", icon: '/icons/react.svg', iconType: 'svg' },
@@ -28,12 +27,3 @@ export const skills: Skill[] = [
   { name: 'Supabase', icon: '/icons/supabase.svg', iconType: 'svg' },
   { name: 'openAI', icon: '/icons/openai.svg', iconType: 'svg' },
 ]
-=======
-  { name: 'Python', icon: '/icons/python.svg', iconType: 'svg' },
-  { name: 'React', icon: '/icons/react.svg', iconType: 'svg' },
-  { name: 'Whatsapp API', icon: '💬', iconType: 'emoji' },
-  { name: 'FastAPI', icon: '/icons/fastapi.svg', iconType: 'svg' },
-  { name: 'PostgreSQL', icon: '/icons/mysql.svg', iconType: 'svg' },
-  { name: 'Docker', icon: '/icons/docker.svg', iconType: 'svg' },
-]
->>>>>>> Stashed changes

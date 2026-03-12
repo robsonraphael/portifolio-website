@@ -8,39 +8,40 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: {
-          base: 'rgb(var(--bg-base))',
-          surface: 'rgb(var(--bg-surface))',
-          elevated: 'rgb(var(--bg-elevated))',
-          overlay: 'rgb(var(--bg-overlay))',
+        // PALETA AZUL (Minha recomendação)
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',  // Cor principal
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
         },
-        gold: {
-          DEFAULT: 'rgb(var(--gold))',
-          light: 'rgb(var(--gold-light))',
-          dim: 'rgb(var(--gold-dim))',
+        
+        // PALETA VERMELHA (Alternativa)
+        red: {
+          50: '#fef2f2',
+          100: '#fee2e2',
+          200: '#fecaca',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#ef4444',  // Cor principal
+          600: '#dc2626',
+          700: '#b91c1c',
+          800: '#991b1b',
+          900: '#7f1d1d',
         },
-        text: {
-          primary: 'rgb(var(--text-primary))',
-          secondary: 'rgb(var(--text-secondary))',
-          muted: 'rgb(var(--text-muted))',
-          disabled: 'rgb(var(--text-disabled))',
-        },
-        border: {
-          default: 'var(--border-default)',
-          subtle: 'var(--border-subtle)',
-          strong: 'var(--border-strong)',
-        },
-        status: {
-          success: 'rgb(var(--status-success))',
-          warning: 'rgb(var(--status-warning))',
-          error: 'rgb(var(--status-error))',
-          info: 'rgb(var(--status-info))',
-        },
-      },
-      fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        sans: ['DM Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        
+        // Cores personalizadas adicionais
+        custom: {
+          dark: '#0f172a',
+          gray: '#1e293b',
+          light: '#64748b'
+        }
       },
     },
   },
