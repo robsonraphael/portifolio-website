@@ -5,7 +5,7 @@ import { Mail, Linkedin } from 'lucide-react'
 import FloatingParticles from '@/app/components/animations/FloatingParticles'
 
 const whatsappUrl =
-  'https://wa.me/?text=Olá%2C%20Robson!%20Quero%20modernizar%20meu%20escritório%20de%20advocacia.'
+  'https://api.whatsapp.com/send?phone=5581981717072&text=Olá%20Robson%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20tecnologia%20para%20escritórios.'
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })

@@ -6,7 +6,7 @@ export default function About() {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="md:col-span-1 flex justify-center">
-            <Image src="/images/prof.png" alt="Robson Raphael" width={220} height={220} className="rounded-xl border border-[var(--border-default)]" />
+            <Image src="/images/prof.jpeg" alt="Robson Raphael" width={220} height={220} className="rounded-xl border border-[var(--border-default)]" />
           </div>
           <div className="md:col-span-2">
             <h2 className="section-title mb-6">Desenvolvedor especializado em tecnologia para advocacia</h2>
