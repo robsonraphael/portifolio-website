@@ -8,20 +8,20 @@ export default function PainPoints() {
   ]
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 section-dark">
       <div className="container mx-auto px-6 max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">Seu escritório ainda perde tempo com isso?</h2>
+        <h2 className="section-title text-center mb-10">Seu escritório ainda perde tempo com isso?</h2>
 
         <ul className="space-y-4 mb-8">
           {pains.map((pain) => (
-            <li key={pain} className="text-lg text-gray-200 flex items-start gap-3">
-              <span className="text-red-500 font-bold">✗</span>
+            <li key={pain} className="text-lg body-text flex items-start gap-3">
+              <span className="text-[var(--gold)] font-bold">✗</span>
               <span>{pain}</span>
             </li>
           ))}
         </ul>
 
-        <p className="text-gray-300 text-lg">
+        <p className="body-text text-lg">
           Cada um desses pontos representa horas da sua semana que poderiam estar em atendimento, audiência ou com a sua família.
         </p>
       </div>

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="antialiased">
+      <body className="antialiased font-[var(--font-body)]">
         <Header />
         {children}
         <Footer />

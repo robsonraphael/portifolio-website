@@ -18,17 +18,15 @@ export default function WhyHire() {
   ]
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 section-dark">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-          Por que escolher quem é especialista em tecnologia jurídica?
-        </h2>
+        <h2 className="section-title text-center mb-12">Por que escolher quem é especialista em tecnologia jurídica?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((item) => (
-            <div key={item.title} className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+            <div key={item.title} className="panel-card p-6">
               <div className="text-3xl mb-4">{item.icon}</div>
-              <h3 className="text-xl text-white font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-300">{item.text}</p>
+              <h3 className="text-xl text-[var(--text-primary)] font-semibold mb-3">{item.title}</h3>
+              <p className="body-text">{item.text}</p>
             </div>
           ))}
         </div>

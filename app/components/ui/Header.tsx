@@ -44,40 +44,35 @@ export default function Header() {
   }, [isMenuOpen])
 
   return (
-    <header className="fixed top-0 w-full bg-black/80 backdrop-blur-lg z-50 border-b border-gray-800">
+    <header className="fixed top-0 w-full bg-[var(--bg-overlay)]/90 backdrop-blur-lg z-50 border-b border-[var(--border-default)]">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-700 via-blue-600 to-[#C8A83C] p-0.5">
-              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--bg-elevated)] via-[var(--gold-dim)] to-[var(--gold)] p-0.5">
+              <div className="w-full h-full rounded-full bg-[var(--bg-surface)] flex items-center justify-center">
                 <Image className="w-8 h-8 rounded-full" src="/images/prof.png" width={200} height={200} alt="profile" />
               </div>
             </div>
             <a href="#home" className="text-left">
-              <div className="text-xl sm:text-2xl font-bold text-white">Robson Raphael</div>
-              <div className="text-xs font-light text-gray-400">Tecnologia Jurídica</div>
+              <div className="text-xl sm:text-2xl display-title">Robson Raphael</div>
+              <div className="text-xs font-light text-[var(--text-muted)]">Tecnologia Jurídica</div>
             </a>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-white transition-all duration-300 font-medium">
+              <a key={item.name} href={item.href} className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-all duration-300 font-medium">
                 {item.name}
               </a>
             ))}
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
-            >
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-primary px-4 py-2 text-xs">
               Falar no WhatsApp
             </a>
           </div>
 
           <button
             ref={buttonRef}
-            className="md:hidden text-gray-400 hover:text-white transition-colors relative w-6 h-6"
+            className="md:hidden text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors relative w-6 h-6"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
@@ -95,18 +90,13 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-gray-400 hover:text-white transition-colors py-2 border-b border-gray-800 font-medium"
+                className="block text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors py-2 border-b border-[var(--border-subtle)] font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="block bg-green-600 hover:bg-green-500 text-white px-4 py-3 rounded-lg font-semibold text-center"
-            >
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="block btn-primary px-4 py-3 text-center text-xs">
               Falar no WhatsApp
             </a>
           </div>

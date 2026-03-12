@@ -8,40 +8,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // PALETA AZUL (Minha recomendação)
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',  // Cor principal
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        navy: {
+          DEFAULT: '#0a0f1e',
+          mid: '#111827',
+          light: '#1a2540',
         },
-        
-        // PALETA VERMELHA (Alternativa)
-        red: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444',  // Cor principal
-          600: '#dc2626',
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d',
+        gold: {
+          DEFAULT: '#c9a84c',
+          light: '#e8c97a',
+          dim: '#9a7a38',
         },
-        
-        // Cores personalizadas adicionais
-        custom: {
-          dark: '#0f172a',
-          gray: '#1e293b',
-          light: '#64748b'
-        }
+        cream: {
+          DEFAULT: '#f5f0e8',
+          dim: '#d4cbb8',
+        },
+      },
+      fontFamily: {
+        display: ['Cormorant Garamond', 'serif'],
+        sans: ['DM Sans', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
     },
   },
