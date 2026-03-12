@@ -5,6 +5,7 @@ export default function PainPoints() {
     'Clientes sem resposta fora do horário comercial',
     'Site desatualizado que não gera contatos',
     'Processos organizados em planilhas e pastas',
+    'Monitoramento de processos e prazos manual',
   ]
 
   return (

@@ -10,7 +10,7 @@ export default function Portfolio() {
             <span className="brand-badge whitespace-nowrap">Em desenvolvimento</span>
           </div>
           <p className="body-text mb-6">
-            Plataforma de tecnologia desenvolvida exclusivamente para escritórios de advocacia, com automação de processos, gestão de documentos e
+            Plataforma desenvolvida exclusivamente para escritórios de advocacia, com monitoramento de movimentações de processos diário, gestão de documentos e lembretes via whatsapp ou email, além de uma futura
             integração de ferramentas jurídicas.
           </p>
           <button disabled className="px-5 py-3 rounded-[var(--radius-md)] bg-[var(--bg-elevated)] text-[var(--text-muted)] cursor-not-allowed border border-[var(--border-subtle)]">

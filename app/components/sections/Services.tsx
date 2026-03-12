@@ -10,7 +10,7 @@ export default function Services() {
     {
       icon: '💬',
       title: 'Automação de Atendimento no WhatsApp',
-      description: 'Bot jurídico que responde clientes 24 horas, faz triagem automática de casos, agenda consultas e envia lembretes.',
+      description: 'Atendimento jurídico que responde clientes 24 horas, faz triagem automática de casos, agenda consultas e envia lembretes.',
     },
     {
       icon: '⚙️',
