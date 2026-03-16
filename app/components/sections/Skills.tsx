@@ -13,11 +13,8 @@ export default function Skills() {
         </div>
 
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div key={step} className="panel-card p-6 text-center">
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent)]/20 text-[var(--accent)] font-bold mb-3">
-                {index + 1}
-              </span>
               <p className="text-[var(--text-primary)] font-medium">{step}</p>
             </div>
           ))}
