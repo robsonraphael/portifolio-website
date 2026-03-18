@@ -42,7 +42,7 @@ export default function Portfolio() {
                   href={project.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex px-5 py-3 rounded-[var(--radius-md)] bg-[var(--accent)] text-white hover:opacity-90 transition-opacity"
+                  className="inline-flex px-5 py-3 btn-project text-white hover:opacity-90 transition-opacity"
                 >
                   Ver site
                 </a>
