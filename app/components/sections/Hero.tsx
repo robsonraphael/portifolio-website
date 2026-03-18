@@ -20,7 +20,7 @@ export default function Hero() {
         </p>
 
         <div className="space-x-4 space-y-4">
-          <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-primary px-8 py-4 inline-block text-sm">
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whats px-8 py-4 inline-block text-sm">
             Quero modernizar meu escritório
           </a>
 

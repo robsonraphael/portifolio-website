@@ -48,7 +48,7 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div className="space-y-4">
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-primary font-semibold p-4 block text-center text-sm">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whats font-semibold p-4 block text-center text-sm">
                 Falar no WhatsApp
               </a>
 
