@@ -77,6 +77,20 @@ body {
     box-shadow: var(--shadow-md);
   }
 
+  .btn-project {
+    border-radius: var(--radius-md);
+    background: none;
+    border: 1px solid var(--border-default);
+    color: var(--text-primary);
+    border-color: var(--gold);
+  }
+  
+  .btn-project:hover {
+    background: #1a263d;
+    color: var(--gold);
+    transition: all 0.2s ease;
+  }
+
   .btn-primary {
     background: var(--gold);
     color: var(--bg-base);
@@ -87,6 +101,39 @@ body {
     font-weight: 500;
     transition: all 0.2s ease;
   }
+
+  .btn-whats {
+    background: #1EB954;
+    color: white;
+    border-radius: var(--radius-md);
+    border: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .btn-whats-header {
+    background: transparent;
+    color: #25D366;
+    border-radius: var(--radius-md);
+    border: 1px solid #1EB954;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .btn-whats-header:hover {
+    background: rgba(37, 211, 102, 0.1);
+  }
+
+  .btn-whats:hover {
+    background: #25D366;
+    box-shadow: rgba(37, 211, 102, 0.5);
+    transform: translateY(-1px);
+  }
+  
 
   .btn-primary:hover {
     background: var(--gold-light);
