@@ -65,7 +65,7 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-primary px-4 py-2 text-xs">
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-whats-header px-4 py-2 text-xs">
               Falar no WhatsApp
             </a>
           </div>
@@ -96,7 +96,7 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="block btn-primary px-4 py-3 text-center text-xs">
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="block btn-whats-header px-4 py-3 text-center text-xs">
               Falar no WhatsApp
             </a>
           </div>
