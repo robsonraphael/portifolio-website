@@ -82,13 +82,14 @@ body {
     background: none;
     border: 1px solid var(--border-default);
     color: var(--text-primary);
-    border-color: var(--gold);
+    border-color: rgba(201, 168, 76, 0.2);
   }
   
   .btn-project:hover {
     background: #1a263d;
     color: var(--gold);
     transition: all 0.2s ease;
+    border-color: transparent;
   }
 
   .btn-primary {
