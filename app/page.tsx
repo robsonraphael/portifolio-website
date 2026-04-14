@@ -1,6 +1,7 @@
 import Hero from '@/app/components/sections/Hero'
 import PainPoints from '@/app/components/sections/PainPoints'
 import Services from '@/app/components/sections/Services'
+import Niches from '@/app/components/sections/Niches'
 import WhyHire from '@/app/components/sections/WhyHire'
 import Portfolio from '@/app/components/sections/Portfolio'
 import About from '@/app/components/sections/About'
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <PainPoints />
       <Services />
+      <Niches />
       <WhyHire />
       <Portfolio />
       <About />
