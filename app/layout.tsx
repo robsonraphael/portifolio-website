@@ -4,8 +4,8 @@ import Header from '@/app/components/ui/Header'
 import Footer from '@/app/components/ui/Footer'
 
 export const metadata: Metadata = {
-  title: 'Robson Raphael | Tecnologia Jurídica',
-  description: 'Soluções em tecnologia para escritórios de advocacia: sites profissionais, automação de WhatsApp e sistemas de gestão.',
+  title: 'Robson Raphael | Desenvolvimento e Automação para Negócios',
+  description: 'Soluções em desenvolvimento web, automação de WhatsApp e sistemas de gestão para negócios que querem crescer com tecnologia.',
   icons: '/favicon.ico',
 }
 
