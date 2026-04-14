@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const whatsappUrl =
-  'https://wa.me/5581993873682?text=Olá%2C%20Robson!%20Quero%20modernizar%20meu%20escritório%20de%20advocacia.'
+  'https://wa.me/5581993873682?text=Olá%2C%20Robson!%20Quero%20saber%20mais%20sobre%20seus%20serviços.'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -50,12 +50,12 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--bg-elevated)] via-[var(--gold-dim)] to-[var(--gold)] p-0.5">
               <div className="w-full h-full rounded-full bg-[var(--bg-surface)] flex items-center justify-center">
-                <Image className="w-8 h-8 rounded-full" src="/images/prof.jpeg" width={200} height={200} alt="profile" />
+                <Image className="w-8 h-7 rounded-full" src="/images/logo.png" width={300} height={300} alt="profile" />
               </div>
             </div>
             <a href="#home" className="text-left">
               <div className="text-xl sm:text-2xl display-title">Robson Raphael</div>
-              <div className="text-xs font-light text-[var(--text-muted)]">Tecnologia Jurídica</div>
+              <div className="text-xs font-light text-[var(--text-muted)]">Desenvolvimento e Automação para Negócios</div>
             </a>
           </div>
 
