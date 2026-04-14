@@ -1,9 +1,9 @@
 export default function WhyHire() {
   const items = [
     {
-      icon: '⚖️',
-      title: 'Foco exclusivo em advocacia',
-      text: 'Não desenvolvo para qualquer segmento. Cada solução é pensada para a realidade do escritório de advocacia.',
+      icon: '🎯',
+      title: 'Tecnologia aplicada ao seu negócio',
+      text: 'Cada solução é desenhada para a rotina real da sua operação, com foco em resultado e melhoria de processos.',
     },
     {
       icon: '🚀',
@@ -13,14 +13,14 @@ export default function WhyHire() {
     {
       icon: '🔧',
       title: 'Suporte após a entrega',
-      text: 'Não sumo depois de entregar. Ofereço suporte para garantir que tudo funcione no seu escritório.',
+      text: 'Não sumo depois de entregar. Ofereço suporte para garantir que tudo funcione no seu negócio.',
     },
   ]
 
   return (
     <section className="py-20 section-dark">
       <div className="container mx-auto px-6">
-        <h2 className="section-title text-center mb-12">Por que escolher quem é especialista em tecnologia jurídica?</h2>
+        <h2 className="section-title text-center mb-12">Por que trabalhar comigo?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((item) => (
             <div key={item.title} className="panel-card p-6">

@@ -1,7 +1,7 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react'
 
 const steps = [
-  'Conversamos sobre seu escritório',
+  'Conversamos sobre seu negócio',
   'Desenvolvo a solução',
   'Entrego funcionando com suporte',
 ]
